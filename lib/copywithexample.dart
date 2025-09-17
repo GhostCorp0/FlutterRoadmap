@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FlutterRoadmapApp());
+  Person person = Person(name: "Aman", age: 25);
+  print(person.name);
+
+  person = person.copyWith();
+  print(person.name);
 }
 
-class FlutterRoadmapApp extends StatelessWidget {
-  const FlutterRoadmapApp({super.key});
+class Person {
+  final String name;
+  final int? age;
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Roadmap',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
+  Person({required this.name,required this.age});
+
+  Person copyWith({
+    String? name,
+    int? age
+  }) {
+    return Person(name: name?? this.name, age: age ?? this.age);
   }
-}
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Roadmap')),
-      body: const Center(
-        child: Text('Hello, Flutter!'),
-      ),
-    );
-  }
 }
