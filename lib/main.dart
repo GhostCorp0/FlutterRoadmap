@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_roadmap/riverpod/home_screen_provider.dart';
-import 'package:flutter_roadmap/riverpod/multiple_state_state_provider.dart';
-import 'package:flutter_roadmap/riverpod/state_provider.dart';
+import 'package:flutter_roadmap/riverpod/state_notifier_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: HomeScreenMultipleStateProvider(),
+        home: StateNotifierHomeScreen(),
       ),
     );
   }
