@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_roadmap/family_builder_provider/home_screen.dart';
-import 'package:flutter_roadmap/get_api_riverpod/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
