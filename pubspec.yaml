@@ -35,6 +35,9 @@ dependencies:
   riverpod: ^2.6.1
   flutter_riverpod: ^2.6.1
   http:
+  dio: ^5.9.0
+  image_picker: ^1.2.0
+
 
 dev_dependencies:
   flutter_test:
